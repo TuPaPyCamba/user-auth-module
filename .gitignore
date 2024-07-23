@@ -28,3 +28,6 @@ Thumbs.db
 # Archivos temporales
 *.tmp
 *.swp
+
+# Git
+.gitignore
