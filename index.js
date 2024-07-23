@@ -19,6 +19,10 @@ app.post('/logout', (req, res) => {
 
 })
 
+app.get('/protected', (req, res) => {
+
+})
+
 app.listen(PORT, () => {
     console.log(
         `SERVER: servicios funcionando en el la siguiente direccion. \n ruta de servicio:          http://localhost:${PORT}`
