@@ -1,13 +1,26 @@
-import express from 'express'
+import express from "express";
+import { PORT } from "./config.js";
 
-const app = express()
+const app = express();
 
-const PORT = process.env.PORT ?? 3000
+app.get("/", (req, res) => {
+    res.send("SERVER: funcionando correctamente");
+});
 
-app.get('/', (req, res)=>{
-    res.send('SERVER: funcionando correctamente')
+app.post('/login', (req, res) => {
+
 })
 
-app.listen(PORT, ()=>{
-    console.log(`SERVER: servicios funcionando en el la siguiente direccion. \n ruta de servicio:          http://localhost:${PORT}`)
+app.post('/register', (req, res) => {
+
 })
+
+app.post('/logout', (req, res) => {
+
+})
+
+app.listen(PORT, () => {
+    console.log(
+        `SERVER: servicios funcionando en el la siguiente direccion. \n ruta de servicio:          http://localhost:${PORT}`
+    );
+});
