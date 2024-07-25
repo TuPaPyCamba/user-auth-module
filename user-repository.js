@@ -36,14 +36,19 @@ export class UserRepository {
     }
 
 
-    static login({ username, password }) { 
+    static async login({ username, password }) { 
         Validation.username(username)
         Validation.password(password)
 
         const user = User.findOne({username})
         if (!user)throw new Error('username does not exist')
 
-        const isValid = bcrypt.compareSync(password, user.password)
+        const isValid = await bcrypt.compare(password, user.password)
+        if (!isValid) throw new Error('password is invalid')
+
+        console.log(`SERVER: A new session has been started, the session started is \n Username: ${username} \n`)
+
+        return user
     }
 
 }

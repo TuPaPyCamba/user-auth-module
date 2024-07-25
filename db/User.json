@@ -1,7 +1,1 @@
-[
-    {
-        "_id": "27ddd23f-be63-4c3a-ad1a-7f5a56e8a1d8",
-        "username": "cristiano",
-        "password": "$2b$10$1Ca5aJemnK20cbSElKxHyuscHOIuGLXGGHAvweQF2WWb5XSPcHzsm"
-    }
-]
+[{"_id":"051d8f99-5823-41bd-adba-ff436d001844","username":"cristiano","password":"$2b$10$yZEogIVEEO/J4ELWKfVWV.F/lxJburRGq879R/q3wUofq2aC.AC.i"},{"_id":"f172ad2d-b06a-42ca-971c-1fdcad5a7cb1","username":"maywheather","password":"$2b$10$pIkGZcMuh.Ks1uXOFEfz8uus3OTHfom5kQOoHQX0vDLPxx5gDO.ga"}]
