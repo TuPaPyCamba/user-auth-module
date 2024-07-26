@@ -1,6 +1,7 @@
 import DBLocal from 'db-local'
 import crypto from 'node:crypto'
 import bcrypt from 'bcrypt'
+import 'colors'
 
 import { SALT_ROUNDS } from './config.js'
 
@@ -29,7 +30,7 @@ export class UserRepository {
             password: hasedPassword,
         }).save()
 
-        console.log(`SERVER: New user created \n ID: ${id} \n Username: ${username} \n Password: ${hasedPassword} \n`)
+        console.log(`SERVER:`.green + ` New user created \n ID: ${id} \n Username: ${username} \n Password: ${hasedPassword} \n`)
 
         return id
     }
@@ -45,7 +46,7 @@ export class UserRepository {
         const isValid = await bcrypt.compare(password, user.password)
         if (!isValid) throw new Error('password is invalid')
 
-        console.log(`SERVER: A new session has been started, the session started is \n Username: ${username} \n`)
+        console.log(`SERVER:`.green + ` A new session has been started, the session started is \n Username: ${username} \n`)
 
         return user
     }
